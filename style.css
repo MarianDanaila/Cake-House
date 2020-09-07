@@ -21,7 +21,19 @@ a {
     justify-content: center;
     align-items: center;
 }
-
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+p {
+    color: black;
+    font-size: 1.4rem;
+    margin-top: 5px;
+    line-height: 2.5rem;
+    font-weight: 300;
+    letter-spacing: .05rem;
+}
 /* Main Section */
 #main {
     background-image: url(./images/main.jpg);
@@ -65,6 +77,7 @@ a {
     animation-delay: 2s;
 }
 #main h1:nth-child(3){
+    animation: appear_text_name .5s ease forwards;
     animation-delay: 3s;
 }
 #main h1 span{
@@ -104,6 +117,76 @@ a {
 }
 /* End Main Section */
 
+/*Services Section*/
+
+#services .services {
+    flex-direction: column;
+    text-align: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 100px 0;
+
+}
+#services .section-title {
+    font-size: 4rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 10px;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+#services .service-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+#services .service-item{
+    flex-basis: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 10px;
+    background-image: url(./images/cake.jpg); /*Fix background image*/
+    background-size: cover;
+    margin: 10px 5%;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+#services .service-item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(60deg, #4d105c 0%, #af6ad6 100%);
+    opacity: .8;
+    z-index: -1;
+}
+#services .service-bottom .icon {
+    height: 80px;
+    width: 80px;
+    margin-bottom: 20px;
+}
+#services .service-item h2 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+#services .service-item p {
+    color: white;
+    text-align: left;
+}
+
+/*End Services Section*/
+
 /* Keyframes */
 @keyframes appear_text_box{
     50%{
@@ -120,5 +203,9 @@ a {
         color: white;
     }
 }
-
+@keyframes appear_text_name{
+        100%{
+            color: purple;
+        }
+    }
 /* End Keyframes */
