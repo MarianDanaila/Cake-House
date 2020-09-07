@@ -34,6 +34,14 @@ p {
     font-weight: 300;
     letter-spacing: .05rem;
 }
+.section-title {
+    font-size: 4rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 10px;
+    letter-spacing: .2rem;
+    text-align: center;
+}
 /* Main Section */
 #main {
     background-image: url(./images/main.jpg);
@@ -127,14 +135,6 @@ p {
     padding: 100px 0;
 
 }
-#services .section-title {
-    font-size: 4rem;
-    font-weight: 300;
-    color: black;
-    margin-bottom: 10px;
-    letter-spacing: .2rem;
-    text-align: center;
-}
 #services .service-bottom{
     display: flex;
     align-items: center;
@@ -186,6 +186,71 @@ p {
 }
 
 /*End Services Section*/
+
+/* Schedule Section */
+#schedule .schedule{
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+#schedule .schedule-header h1 {
+    margin-bottom: 50px;
+}
+#schedule .weekly-schedule {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#schedule .schedule-day{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+#schedule .schedule-info{
+    padding: 30px;
+    flex-basis: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: linear-gradient(60deg, #4d105c 0%, #af6ad6 100%);
+    color: white;
+}
+#schedule .schedule-info h1{
+    font-size: 3rem;
+    font-weight: 500;
+}
+#schedule .schedule-img{
+    flex-basis: 50%;
+    height: 100px;
+    overflow: hidden;
+    position: relative;
+}
+#schedule .schedule-img:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(60deg, #4d105c 0%, #af6ad6 100%);
+    opacity: .5;
+}
+#schedule .schedule-img img{
+    transition: .3s ease transform;
+}
+#schedule .schedule-day:hover .schedule-img img{
+    transform: scale(1.1);
+}
+/* End Schedule Section */
 
 /* Keyframes */
 @keyframes appear_text_box{
