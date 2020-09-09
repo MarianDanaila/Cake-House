@@ -252,6 +252,32 @@ p {
 }
 /* End Schedule Section */
 
+/* About Section */
+#about .about{
+    flex-direction: column-reverse;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 20px;
+}
+#about .col-right{
+    width: 100%;
+}
+#about .col-right h2{
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: .2rem;
+    margin-bottom: 10px;
+}
+#about .col-right p {
+    margin-bottom: 20px;
+}
+#about .col-left .about-img{
+    height: 100%;
+    width: 100%;
+}
+/* End About Section */
+
 /* Keyframes */
 @keyframes appear_text_box{
     50%{
